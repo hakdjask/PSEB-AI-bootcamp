@@ -75,3 +75,5 @@ print("Addition: ", add(2), "\n")
 print("Multiplication: ", multiply(3), "\n")
 print("Substraction: ", substract(4), "\n")
 print("Division: ", divide(5), "\n")
+
+print("\n" "All done!")
