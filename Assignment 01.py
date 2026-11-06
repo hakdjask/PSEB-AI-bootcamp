@@ -1,4 +1,7 @@
 class studentManager:
+   
+   # Creating a function to get the names of the students and store them in a list
+   
     def s_name(self):
         student_names = []
             
@@ -7,6 +10,8 @@ class studentManager:
             student_names.append(student_name)
             
         return student_names
+    
+    # Creating a function to get the scores of the students and store them in a list
     
     def s_scores(self, student_names):
         student_scores = []
@@ -19,6 +24,7 @@ class studentManager:
             
         return student_scores
     
+    # Creating a function to find the top scorer among the students
     
     def top_scorer(self, names, scores):
         top_index = 0
@@ -29,6 +35,8 @@ class studentManager:
         
         return names[top_index], scores[top_index]
     
+    # Creating the constructor to initialize the student manager and display the results
+    
     def __init__(self): 
         self.names = self.s_name()
         self.scores = self.s_scores(self.names)
@@ -37,12 +45,16 @@ class studentManager:
 
         print("\n")
 
+        # Displaying the names and scores of students who scored 50 or above
+
         for i in range(len(self.names)):
             if self.scores[i] < 50:
                 continue
             print(f"{self.names[i]} scored {self.scores[i]}.")
 
         print("\n")
+
+        # Displaying the top scorer's name and score
 
         print(f"The top scorer is {top_name} with a score of {top_score}.")
 
